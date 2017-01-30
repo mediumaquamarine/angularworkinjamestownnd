@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('easyismath')
+  angular.module('work')
     .config(['$stateProvider', 'lockProvider', '$urlRouterProvider', 'jwtOptionsProvider', function($stateProvider, lockProvider, $urlRouterProvider, jwtOptionsProvider) {
 
       $urlRouterProvider.otherwise('/home');
