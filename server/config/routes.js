@@ -1,7 +1,7 @@
 (function() {
 
   var usersController = require('../users/usercontroller.js');
-  var lastestController = require('../latestreviews/controller.js');
+  var latestController = require('../latestreviews/controller.js');
 
   module.exports = function(app, express) {
 
