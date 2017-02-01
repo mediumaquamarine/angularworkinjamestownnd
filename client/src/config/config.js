@@ -10,7 +10,13 @@
         .state('home', {
           url: '/home',
           templateUrl: '../../templates/main/index.html',
-          controller: 'MainController as main',
+          controller: 'MainController as main'
+        })
+
+        .state('reviews', {
+          url: '/reviews',
+          templateUrl: '../../templates/reviews/reviews.html',
+          controller: 'ReviewController as review',
           css: '../../content/css.css'
         })
 
