@@ -1,13 +1,14 @@
 (function() {
 
   angular.module('work')
-    .controller('MainController', ['$rootScope', 'authService', 'userdata', '$state', '$window', function($rootScope, authService, userdata, $state, $window) {
+    .controller('MainController', ['$rootScope', 'authService', 'userdata', '$state', '$window', 'companydata', function($rootScope, authService, userdata, $state, $window, companydata) {
       //if user is not authenticated then local storage, except for userProfile, gets wiped
       if (!$rootScope.isAuthenticated) {
         $window.localStorage.clear();
       }
 
       var vm = this;
+      vm.latestReviews;
       vm.profile;
       //this is neccesary to use authService from the navbar
       authService.getProfileDeferred().then(function(profile) {
@@ -21,6 +22,7 @@
       vm.level = function(grade) {
         $state.go($rootScope.userStuff.grade1);
       };
+      companydata.getLatestReviews();
 
     }]);
 
