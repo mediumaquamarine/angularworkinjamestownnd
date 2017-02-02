@@ -9,8 +9,8 @@
     },
     lasttenreviews: [String],
     allreviews: [String],
+    authors: [String],
     rating: Number
-
   });
 
   module.exports = mongoose.model('companies', CompanySchema);
