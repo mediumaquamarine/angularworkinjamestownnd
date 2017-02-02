@@ -16,7 +16,7 @@
         }
       });
     }
-    //can be called to add a medal to the user
+    // write a review to the database
   //   addMedal: function(req, res, next) {
   //     var userid = req.body.userid;
   //     var medal = req.body.medal;
