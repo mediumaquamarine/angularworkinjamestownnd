@@ -7,7 +7,6 @@
       type: String,
       unique: true
     },
-    lasttenreviews: [String],
     allreviews: [String],
     authors: [String],
     rating: Number
