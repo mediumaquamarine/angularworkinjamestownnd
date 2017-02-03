@@ -1,0 +1,21 @@
+<form ng-submit="write.submit()">
+
+  <div class="form-group">
+    <!-- text area -->
+    <label for="textareaforreview">Review</label>
+    <textarea class="form-control" id="textareaforreview" placeholder="Write your review here" ng-model="write.review"></textarea><br>
+    <div align="center">Give a Rating<br>
+      1 = horrible<br>
+      5 = great
+    </div>
+    <select class="form-control" ng-model="write.rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <button class="btn btn-success btn-lg" type="submit">Submit</button>
+</form>
