@@ -4,5 +4,6 @@
   </div>
   <div class="panel-body">
     <div align="center" class="headline"> Reviews for {{review.company}}</div>
-    <div align="center" class="displayReviews" ng-bind="review.display"></div>
+    <div align="center" class="displayReviews" ng-repeat="x in review.reviews" ng-bind-html="review.trustAsHtml(x)">
+    </div>
 </div>
