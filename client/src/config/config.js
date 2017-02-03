@@ -16,8 +16,13 @@
         .state('reviews', {
           url: '/reviews',
           templateUrl: '../../templates/reviews/reviews.html',
-          controller: 'ReviewController as review',
-          css: '../../content/css.css'
+          controller: 'ReviewController as review'
+        })
+
+        .state('writereview', {
+          url: '/writereview',
+          templateUrl: '../../templates/writereview/writereview.html',
+          controller: 'WriteReviewController as write'
         })
 
 

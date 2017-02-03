@@ -18,6 +18,7 @@
     },
     //can be called to write a review to the database
     writeReview: function(req, res) {
+      console.log('made it here');
       var companyName = req.body.companyName;
       var review = req.body.review;
       var rating = req.body.rating;

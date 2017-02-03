@@ -7,6 +7,7 @@
       var vm = this;
       //grabs the name of the current company
       vm.company = $window.localStorage.company;
+      vm.display = "Be the first to review";
 
     }]);
 

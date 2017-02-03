@@ -9,6 +9,7 @@
   require('./config/middleware.js')(app, express);
   require('./config/routes.js')(app, express);
   require('./config/authmiddleware.js')(app, express);
+  require('./config/protectedroutes.js')(app, express);
 
   module.exports = app;
 
