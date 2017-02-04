@@ -25,19 +25,27 @@
       var review = req.body.review;
       var rating = req.body.rating;
       var author = req.body.author;
-      Company.findOneAndUpdate({company: companyName}, {$push: { authors: author, allreviews: review }}, function (err, comp) {
-        if (err) {
-          throw err;
-        }
-        comp.rating = rating;
-        comp.save(function(err) {
-          if (err) {
-            throw err;
+      Company.findOneAndUpdate({company: companyName},
+        {
+          $push: {
+            allreviews: {
+              $each: [ {author: author, review: review, rating: rating} ]
+            }
           }
-          res.json('success');
-        });
-      });
+        },
+         function (err, comp) {
+           if (err) {
+             throw err;
+           }
+           comp.save(function(err) {
+             if (err) {
+             throw err;
+           }
+             res.json('success');
+           });
+         }
+      );
     }
-  };
+  }
 
 })();

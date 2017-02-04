@@ -7,9 +7,7 @@
       type: String,
       unique: true
     },
-    allreviews: [String],
-    authors: [String],
-    rating: Number
+    allreviews: []
   });
 
   module.exports = mongoose.model('companies', CompanySchema);
