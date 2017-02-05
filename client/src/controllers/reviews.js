@@ -5,7 +5,7 @@
 
 
       var vm = this;
-      //grabs the name of the current company
+      //grabs the name of the current company *the fist letter of the company is capitalized*
       vm.company = $window.localStorage.company;
       vm.reviews = vm.reviews || "Be the first to review";
       vm.authors;
@@ -15,7 +15,6 @@
 
       $http.post('api/reviews', {companyName: vm.company})
         .then(function(res) {
-          console.log(res.data.reviews);
           vm.reviews = res.data.reviews;
 
         })

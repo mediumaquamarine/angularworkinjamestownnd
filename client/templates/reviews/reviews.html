@@ -1,18 +1,21 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title" ng-bind="profile.name"></h3>
+    <h3 class="panel-title" ng-bind="userProfile.name"></h3>
   </div>
+  <!-- main panel -->
   <div class="panel-body">
     <div align="center" class="headline"> Reviews for {{review.company}}
       <button class="btn btn-small btn-success" ng-click="review.writeAReview()">Write a review</button>
     </div>
-
-
-      <div align="center" class="displayReviews col-md-8" ng-repeat="x in review.reviews track by $index">
-           {{x.author}}
-           {{x.rating}}
-           {{x.review}}
+      <!-- review panels -->
+      <div align="center" class="displayReviews" ng-repeat="x in review.reviews track by $index">
+        <div class="panel panel-primary">
+          <div class="panel-heading reviewTitle">
+            <div class="author">Author: {{x.author}}</div>
+            <div class="rating">Rating: {{x.rating}}</div>
+          </div>
+          <div class="reviewStyle">{{x.review}}</div>
+        </div>
       </div>
-
-
+  </div>
 </div>
