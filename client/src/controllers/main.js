@@ -23,6 +23,7 @@
         $window.localStorage.company = 'Cavendish';
         $state.go('reviews');
       };
+
       companydata.getLatestReviews();
 
     }]);

@@ -1,6 +1,7 @@
 (function() {
 
   var Company = require('./companymodel.js');
+  var Latest = require('../latestreviews/controller.js');
 
   module.exports = {
     getReviews: function (req, res) {
@@ -41,6 +42,7 @@
              if (err) {
              throw err;
            }
+             Latest.updateLatestReview(review, companyName.toLowerCase());
              res.json('success');
            });
          }

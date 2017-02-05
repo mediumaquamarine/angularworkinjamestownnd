@@ -5,7 +5,7 @@
       var getLatestReviews = function() {
         $http.get('api/lastreviews', {})
           .then((res) => {
-            $rootScope.latestReviews = res.data[0].reviews;
+            $rootScope.latestReviews = res.data[0];
           });
       };
 
