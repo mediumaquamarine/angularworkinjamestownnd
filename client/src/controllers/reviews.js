@@ -8,13 +8,16 @@
       //grabs the name of the current company
       vm.company = $window.localStorage.company;
       vm.reviews = vm.reviews || "Be the first to review";
+      vm.authors;
+      vm.rating;
       vm.trustAsHtml = $sce.trustAsHtml;
+      vm.writeAReview = companydata.signInOrWrite;
 
       $http.post('api/reviews', {companyName: vm.company})
         .then(function(res) {
-          vm.reviews = res.data.reviews;
-          console.log(res.data.authors);
           console.log(res.data.reviews);
+          vm.reviews = res.data.reviews;
+
         })
     }]);
 

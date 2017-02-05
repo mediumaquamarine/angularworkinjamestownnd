@@ -3,7 +3,16 @@
     <h3 class="panel-title" ng-bind="profile.name"></h3>
   </div>
   <div class="panel-body">
-    <div align="center" class="headline"> Reviews for {{review.company}}</div>
-    <div align="center" class="displayReviews" ng-repeat="x in review.reviews" ng-bind-html="review.trustAsHtml(x)">
+    <div align="center" class="headline"> Reviews for {{review.company}}
+      <button class="btn btn-small btn-success" ng-click="review.writeAReview()">Write a review</button>
     </div>
+
+
+      <div align="center" class="displayReviews col-md-8" ng-repeat="x in review.reviews track by $index">
+           {{x.author}}
+           {{x.rating}}
+           {{x.review}}
+      </div>
+
+
 </div>
