@@ -12,8 +12,6 @@
       vm.review;
       vm.rating;
       vm.submit = writefac.submitReview;
-
-
     }]);
 
 })();

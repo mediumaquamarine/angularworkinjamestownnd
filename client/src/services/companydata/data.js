@@ -5,7 +5,11 @@
       var getLatestReviews = function() {
         $http.get('api/lastreviews', {})
           .then((res) => {
-            $rootScope.latestReviews = res.data[0];
+            var excerpts = res.data[0];
+            for (var key in excerpts) {
+              excerpts[key] = excerpts[key].slice(0,30) + '...'
+            }
+            $rootScope.latestReviews = excerpts;
           });
       };
 

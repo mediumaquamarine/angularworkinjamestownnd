@@ -1,3 +1,8 @@
+
+.navbar-brand {
+  padding-top: 10px;
+}
+
 .headline {
   color: darkblue;
   font-size: 30px;
@@ -110,5 +115,10 @@
   font-size:20px;
   padding:6px;
   background-color: ghostwhite;
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
 

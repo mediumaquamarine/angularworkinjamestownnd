@@ -12,11 +12,12 @@
       vm.rating;
       vm.trustAsHtml = $sce.trustAsHtml;
       vm.writeAReview = companydata.signInOrWrite;
+      vm.loaded = false;
 
       $http.post('api/reviews', {companyName: vm.company})
         .then(function(res) {
-          vm.reviews = res.data.reviews;
-
+          vm.reviews = res.data.reviews.reverse();
+          vm.loaded = true;
         })
     }]);
 
