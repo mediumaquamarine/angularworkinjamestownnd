@@ -1,3 +1,7 @@
+.descboxinner {
+  word-wrap: break-word;
+}
+
 
 .navbar-brand {
   padding-top: 10px;
