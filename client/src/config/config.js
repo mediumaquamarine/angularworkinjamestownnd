@@ -25,6 +25,11 @@
           controller: 'WriteReviewController as write'
         })
 
+        .state('terms', {
+          url: '/terms',
+          templateUrl: '../../templates/terms.html'
+        })
+
 
       lockProvider.init({
         clientID: 'Q7K0Q6Ip5I4zprAqHBCtfA5EMUbkxJce',
