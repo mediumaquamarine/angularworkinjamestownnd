@@ -30,16 +30,21 @@
           templateUrl: '../../templates/terms.html'
         })
 
+        .state('mustverify', {
+          url: '/mustverify',
+          templateUrl: '../../templates/mustverify.html'
+        })
+
 
       lockProvider.init({
-        clientID: 'Q7K0Q6Ip5I4zprAqHBCtfA5EMUbkxJce',
-        domain: 'easyismath.auth0.com',
+        clientID: 'CR9Vt7bU2sSDxfTxi8KAfE30NcTVSQaa',
+        domain: 'workinjamestownnd.auth0.com',
         options: {
           theme: {
-            logo: '../../content/easyismathsmall.png',
+            logo: '../../content/workinjamestownnd.png',
           },
           languageDictionary: {
-            title: "Ready for adventure?"
+            title: "Ready to tell all?"
           }
         }
       });

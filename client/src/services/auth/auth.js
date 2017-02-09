@@ -6,7 +6,7 @@
     .module('work')
     .service('authService', authService);
 
-  authService.$inject = ['$q', 'lock', 'authManager', '$rootScope'];
+  authService.$inject = ['$q', 'lock', 'authManager', '$rootScope', '$state'];
 
   function authService( $q, lock, authManager, $rootScope) {
     //part of getting user profile

@@ -2,6 +2,9 @@
   word-wrap: break-word;
 }
 
+body {
+  background-color: whitesmoke;
+}
 
 .navbar-brand {
   padding-top: 10px;
@@ -90,9 +93,9 @@
 }
 
 .descbox6 {
-  border: 2px solid steelblue;
+  border: 2px solid orangered;
   text-align: center;
-  color: steelblue;
+  color: orangered;
   font-size: 26px;
   font-family: Papyrus, fantasy;
   padding-top: 8px;
@@ -101,9 +104,6 @@
   margin-bottom:4px;
 }
 
-.displayTitle {
-
-}
 
 .author {
   font-size: 16px;
@@ -129,6 +129,7 @@
   font-size:20px;
   padding:6px;
   background-color: ghostwhite;
+  word-wrap: break-word;
 }
 
 

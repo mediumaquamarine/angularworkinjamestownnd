@@ -6,6 +6,9 @@
       if (!$rootScope.isAuthenticated) {
         $state.go('home');
       }
+      if(!JSON.parse($window.localStorage.profile).email_verified) {
+        $state.go('mustverify');
+      }
       var vm = this;
       //grabs the name of the current company
       vm.company = $window.localStorage.company;
