@@ -30,7 +30,7 @@
       .then(function() {
           //puts user data on the rootScope = userStuff
         userdata.getData(vm.profile.user_id);
-        vm.loaded = true;
+
       });
 
       companydata.getLatestReviews();

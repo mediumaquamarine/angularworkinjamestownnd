@@ -7,7 +7,7 @@
           .then((res) => {
             var excerpts = res.data[0];
             for (var key in excerpts) {
-              excerpts[key] = excerpts[key].slice(0,30) + '...'
+              excerpts[key] = excerpts[key].slice(0,20) + '...'
             }
             $rootScope.latestReviews = excerpts;
           });
