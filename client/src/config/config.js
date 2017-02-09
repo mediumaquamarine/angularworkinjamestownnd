@@ -36,10 +36,10 @@
         domain: 'easyismath.auth0.com',
         options: {
           theme: {
-            logo: '../../content/easyismathsmall.png',
+            logo: '../../content/workinjamestownnd.png',
           },
           languageDictionary: {
-            title: "Ready for adventure?"
+            title: "Ready to tell all?"
           }
         }
       });
