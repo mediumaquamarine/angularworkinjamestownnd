@@ -50,6 +50,8 @@
         authManager.authenticate();
       });
     }
+
+
     return {
       login: login,
       logout: logout,
