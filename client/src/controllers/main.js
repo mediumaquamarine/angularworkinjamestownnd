@@ -22,15 +22,13 @@
       vm.hugos = mainfac.goWrite;
       vm.cashwise = mainfac.goWrite;
       vm.napa = mainfac.goWrite;
-      vm.loaded = false;
       //this is neccesary to use authService from the navbar
       authService.getProfileDeferred().then(function(profile) {
         vm.profile = profile;
       })
       .then(function() {
           //puts user data on the rootScope = userStuff
-        userdata.getData(vm.profile.user_id);
-
+        userdata.getData(vm.profile.user_id, vm.profile.email_verified);
       });
 
       companydata.getLatestReviews();

@@ -6,6 +6,7 @@
   module.exports = {
     getUserData: function (req, res, next) {
       var userid = req.body.id;
+      var emailVerified = req.body.emailVerified;
       //see if user already exist and send user's data
       User.findOne({userid: userid}, function(err, user) {
         if (err) {
@@ -21,7 +22,8 @@
                 next(err);
               }
               var newUser = new User ({
-                userid: userid
+                userid: userid,
+                email: emailVerified
               });
               newUser.save(function(err) {
                 if (err) {
@@ -35,26 +37,6 @@
         }
       });
     }
-    //can be called to add a medal to the user
-  //   addMedal: function(req, res, next) {
-  //     var userid = req.body.userid;
-  //     var medal = req.body.medal;
-  //     var upLevel = req.body.level;
-  //     var points = req.body.points;
-  //     User.findOneAndUpdate({userid: userid}, {$push: {medals: medal}}, function (err, user) {
-  //       if (err) {
-  //         throw err;
-  //       }
-  //       user.grade1 = upLevel;
-  //       user.points += points;
-  //       user.save(function(err) {
-  //         if (err) {
-  //           throw err;
-  //         }
-  //         res.json(user);
-  //       });
-  //     });
-  //   }
   };
 
 })();

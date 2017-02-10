@@ -2,7 +2,7 @@
 
   angular.module('work')
 
-    .run(['$rootScope', 'authService', 'lock', 'authManager', function ($rootScope, authService, lock, authManager) {
+    .run(['$rootScope', 'authService', 'lock', 'authManager', '$window',function ($rootScope, authService, lock, authManager, $window) {
       // Put the authService on $rootScope so its methods
       // can be accessed from the nav bar
       $rootScope.authService = authService;

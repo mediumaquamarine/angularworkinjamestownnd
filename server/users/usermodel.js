@@ -6,8 +6,8 @@
     userid: {
       type: String,
       unique: true
-    }
-
+    },
+    email: Boolean
   });
 
   module.exports = mongoose.model('users', UserSchema);
