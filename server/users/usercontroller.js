@@ -4,6 +4,7 @@
   var User = require('./usermodel.js');
 
   module.exports = {
+
     getUserData: function (req, res, next) {
       var userid = req.body.id;
       var emailVerified = req.body.emailVerified;

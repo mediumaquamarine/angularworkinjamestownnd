@@ -12,7 +12,6 @@
     //part of getting user profile
     var userProfile = JSON.parse(localStorage.getItem('profile')) || null;
     var deferredProfile = $q.defer();
-
     if (userProfile) {
       deferredProfile.resolve(userProfile);
     }
@@ -50,7 +49,6 @@
         authManager.authenticate();
       });
     }
-
 
     return {
       login: login,

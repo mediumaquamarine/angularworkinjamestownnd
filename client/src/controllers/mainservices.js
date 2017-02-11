@@ -5,7 +5,7 @@
 
       return {
         goWrite: goWrite
-      }
+      };
 
       function goWrite(company) {
         $window.localStorage.company = company;

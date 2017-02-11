@@ -4,6 +4,7 @@
   var Latest = require('../latestreviews/controller.js');
 
   module.exports = {
+
     getReviews: function (req, res) {
       var companyName = req.body.companyName;
       //see if user already exist and send user's data
@@ -40,14 +41,14 @@
            }
            comp.save(function(err) {
              if (err) {
-             throw err;
-           }
+               throw err;
+             }
              Latest.updateLatestReview(review, companyName.toLowerCase());
              res.json('success');
            });
          }
       );
     }
-  }
+  };
 
 })();

@@ -6,7 +6,7 @@
       if (!$rootScope.isAuthenticated) {
         $state.go('home');
       }
-      if(!JSON.parse($window.localStorage.profile).email_verified) {
+      if (!JSON.parse($window.localStorage.profile).email_verified) {
         authService.logout();
         $state.go('mustverify');
       }

@@ -33,8 +33,7 @@
         .state('mustverify', {
           url: '/mustverify',
           templateUrl: '../../templates/mustverify.html'
-        })
-
+        });
 
       lockProvider.init({
         clientID: 'CR9Vt7bU2sSDxfTxi8KAfE30NcTVSQaa',
@@ -44,7 +43,7 @@
             logo: '../../content/workinjamestownnd.png',
           },
           languageDictionary: {
-            title: "Ready to tell all?"
+            title: 'Ready to tell all?'
           }
         }
       });
