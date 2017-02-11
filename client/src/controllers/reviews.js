@@ -7,7 +7,7 @@
       var vm = this;
       //grabs the name of the current company *the fist letter of the company is capitalized*
       vm.company = $window.localStorage.company;
-      vm.reviews = vm.reviews || "Be the first to review";
+      vm.reviews = vm.reviews || 'Be the first to review';
       vm.authors;
       vm.rating;
       vm.trustAsHtml = $sce.trustAsHtml;
@@ -18,7 +18,7 @@
         .then(function(res) {
           vm.reviews = res.data.reviews.reverse();
           vm.loaded = true;
-        })
+        });
     }]);
 
 })();
