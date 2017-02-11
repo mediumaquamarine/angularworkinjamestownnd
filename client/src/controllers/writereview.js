@@ -7,6 +7,7 @@
         $state.go('home');
       }
       if(!JSON.parse($window.localStorage.profile).email_verified) {
+        authService.logout();
         $state.go('mustverify');
       }
       var vm = this;
